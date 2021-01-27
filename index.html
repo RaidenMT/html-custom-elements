@@ -16,9 +16,6 @@
 <body>
 
     <!-- Barra lateral -->
-    <!--    Poder desglosar Icono + titulo -->
-    <!--    Sublista desglosada con href -->
-    <!--    Scroll si se extiende -->
     <!--    Poder esconderse con un boton del header -->
     <!-- Header -->
     <!--    Links -->
@@ -30,69 +27,136 @@
 
     <div class="container-fluid ">
         <div class="row">
-            <nav class="col-md-3 col-lg-2 bg-light sidebar ">
+            <nav class="col-md-3 col-lg-3 bg-light sidebar ">
                 <div class="sidebar-sticky pt-3">
-                    <h6 class="text-muted sidebar-heading">Páginas</h6>
-                    <ul class="nav flex-column">
+                    <!-- <h6 class="text-muted sidebar-heading">Páginas</h6> -->
+                    <ul class="nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link active">
-                                <i class="bi bi-clipboard-data"></i>
-                                Tablero
+                            <a href="./index.html" class="nav-link d-flex align-items-center">
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-clipboard-data"></i>
+                                </span>
+                                <span>Tablero</span>
                             </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- <h6 class="mt-6 text-muted sidebar-heading">Programas</h6> -->
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <span class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#nuevoProyectoLista" role="button" aria-controls="nuevoProyectoCollapse">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                    </span>
+                                    <span>Nuevo Proyecto</span>
+                                </span>
+
+                                <span><i class="bi bi-caret-right align-self-center"></i></span>
+                            </span>
+                            <div id="nuevoProyectoLista" class="multi-level collapse">
+                                <ul class="flex-column nav">
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./index.html" class="nav-link">País</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link d-flex justify-content-between align-items-center collapsed"
+                                data-toggle="collapse" data-target="#submenu-app" aria-expanded="false">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <span class="bi bi-pencil-fill"></span>
+                                    </span>
+                                    <span>Actualizar Proyecto</span>
+                                </span>
+
+                                <span class="link-arrow">
+                                    <span class="bi bi-caret-right"></span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link d-flex justify-content-between align-items-center">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </span>
+                                    <span>Ver Proyecto</span>
+                                </span>
+
+                                <span class="link-arrow">
+                                    <i class="bi bi-caret-right"></i>
+                                </span>
+                            </span>
                         </li>
                     </ul>
 
-                    <h6 class="mt-6 text-muted sidebar-heading">Programas</h6>
-                    <ul class="nav flex-column">
+                    <!-- <h6 class="mt-6 text-muted sidebar-heading">Estadísticas</h6> -->
+                    <ul class="nav justify-content-between row-align-items-center">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="bi bi-plus-circle-fill"></i>
-                                Nuevo Proyecto
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="bi bi-pencil-fill"></i>
-                                Actualizar Proyecto
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="bi bi-eye-fill"></i>
-                                Ver Proyecto
-                            </a>
-                        </li>
-                    </ul>
+                            <span class="nav-link d-flex justify-content-between align-items-center">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <i class="bi bi-clipboard-data"></i>
+                                    </span>
+                                    <span>Reportes</span>
+                                </span>
 
-                    <h6 class="mt-6 text-muted sidebar-heading">Estadísticas</h6>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="bi bi-clipboard-data"></i>
-                                Reportes
-                            </a>
+                                <span class="link-arrow">
+                                    <i class="bi bi-caret-right"></i>
+                                </span>
+                            </span>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="bi bi-folder-fill"></i>
-                                Repositorio
-                            </a>
+                            <span class="nav-link d-flex justify-content-between align-items-center">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <i class="bi bi-folder-fill"></i>
+                                    </span>
+                                    <span>Repositorio</span>
+                                </span>
+
+                                <span class="link-arrow">
+                                    <i class="bi bi-caret-right"></i>
+                                </span>
+                            </span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file">
-                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                    <polyline points="13 2 13 9 20 9"></polyline>
-                                </svg>
-                                Orders
-                            </a>
+                            <span class="nav-link d-flex justify-content-between align-items-center">
+                                <span>
+                                    <span class="sidebar-icon">
+                                        <i class="bi bi-folder-fill"></i>
+                                    </span>
+                                    <span>Orders</span>
+                                </span>
+
+                                <span class="link-arrow">
+                                    <i class="bi bi-caret-right"></i>
+                                </span>
+                            </span>
                         </li>
                     </ul>
                 </div>
             </nav>
-              
+
             <div class="col-10 row">
                 <div class="col">holaaa</div>
             </div>

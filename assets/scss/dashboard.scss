@@ -40,7 +40,27 @@ body {
         color: inherit;
     }
     
-    
+    .nav-item {
+        width: 100%;
+
+        .sidebar-icon {
+            margin-right: 5px;
+
+            i {
+                font-size: 20px; 
+            }
+        }
+    }
+
+    .multi-level {
+        .nav {
+            .nav-item {
+                .nav-link {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 767.98px) {
