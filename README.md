@@ -26,3 +26,4 @@ https://medium.com/wdstack/bootstrap-4-chart-js-39006427f08f
 ##Web Components
 https://dev.to/thepassle/web-components-from-zero-to-hero-4n4m
 https://developer.mozilla.org/es/docs/Web/Web_Components
+https://stackoverflow.com/questions/55080103/how-to-separate-web-components-to-individual-files-and-load-them

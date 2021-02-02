@@ -36,15 +36,6 @@ body {
 .sidebar.nav-link:hover .bi, .sidebar.nav-link.active .bi {
   color: inherit;
 }
-.sidebar .nav-item {
-  width: 100%;
-}
-.sidebar .nav-item .sidebar-icon {
-  margin-right: 5px;
-}
-.sidebar .nav-item .sidebar-icon i {
-  font-size: 20px;
-}
 .sidebar .multi-level .nav .nav-item .nav-link::before {
   content: "";
   width: 0px;
