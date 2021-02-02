@@ -14,6 +14,14 @@ https://www.w3schools.com/bootstrap4/default.asp
 ##Sidebar
 https://getbootstrap.com/docs/4.6/examples/dashboard/
 
+
+#JS
+##Multi select
+https://developer.snapappointments.com/bootstrap-select/
+
+##Chartjs
+https://www.chartjs.org/
+
 ##Web Components
 https://dev.to/thepassle/web-components-from-zero-to-hero-4n4m
 https://developer.mozilla.org/es/docs/Web/Web_Components
