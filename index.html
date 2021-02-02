@@ -61,18 +61,21 @@
                             <div id="nuevoProyectoLista" class="multi-level collapse">
                                 <ul class="flex-column nav">
                                     <wc-sidebar-link><span slot="name">País</span></wc-sidebar-link>
-                                    <wc-sidebar-link><span slot="name">País</span></wc-sidebar-link>
-                                    <wc-sidebar-link><span slot="name">País</span></wc-sidebar-link>
-                                    <wc-sidebar-link><span slot="name">País</span></wc-sidebar-link>
-                                    <wc-sidebar-link><span slot="name">País</span></wc-sidebar-link>
+                                    <wc-sidebar-link><span slot="name">Sector</span></wc-sidebar-link>
+                                    <wc-sidebar-link><span slot="name">Subsector</span></wc-sidebar-link>
+                                    <wc-sidebar-link><span slot="name">Cofinanciador</span></wc-sidebar-link>
+                                    <wc-sidebar-link><span slot="name">Eje Estratégico</span></wc-sidebar-link>
                                     <wc-sidebar-link></wc-sidebar-link>
                                 </ul>
                             </div>
                         </li>
-                        <wc-nav-item></wc-nav-item>
-                        <wc-nav-item></wc-nav-item>
-                        <wc-nav-item></wc-nav-item>
-                        <li class="nav-item">
+                        <wc-nav-item wc-text="Actualizar Proyecto" wc-icon="pencil-fill"></wc-nav-item>
+                        <wc-nav-item wc-text="Ver Proyecto" wc-icon="eye-fill"></wc-nav-item>
+                        <wc-nav-item wc-text="Reportes" wc-icon="clipboard-data"></wc-nav-item>
+                        <wc-nav-item wc-text="Repositorio" wc-icon="folder-fill"></wc-nav-item>
+                        <wc-nav-item wc-text="Orders" wc-icon="folder-fill"></wc-nav-item>
+
+                        <!-- <li class="nav-item">
                             <span class="nav-link d-flex justify-content-between align-items-center collapsed"
                                 data-toggle="collapse" data-target="#submenu-app" aria-expanded="false">
                                 <span>
@@ -143,7 +146,7 @@
                                     <i class="bi bi-caret-right"></i>
                                 </span>
                             </span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -288,7 +291,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
 
     <script type="module" src="./assets/components/_sidebar-link/_sidebar-link.js"></script>
-    <script src="./assets/components/_nav-item/_nav-item.js"></script>
+    <script type="module" src="./assets/components/_nav-item/_nav-item.js"></script>
 
 
     <script src="./assets/js/index.js"></script>

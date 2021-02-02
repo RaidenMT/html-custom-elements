@@ -1,29 +1,15 @@
 class WcWebComponent {
-    constructor(component) {
+    constructor(component, transformFunc) {
         this.name = 'wc-' + component;
         this.component = component;
         this.template = undefined;
+        this.transformFunc = transformFunc;
     }
 
     registerComponent() {
         fetch(`./assets/components/_${this.component}/_${this.component}.html`)
             .then(stream => stream.text())
             .then(html => this.parseHtml(html))
-            // .then(function (html) {
-            //     var parser = new DOMParser();
-            //     var doc = parser.parseFromString(html, "text/html");
-
-            //     // You can now even select part of that html as you would in the regular DOM 
-            //     // Example:
-            //     // var docArticle = doc.querySelector('article').innerHTML;
-
-            //     console.log(this);
-            //     // console.log(doc.querySelector('#wcElement'));
-            //     // console.log(doc.querySelector('#wcElement').content);
-            //     // this.template = doc.querySelector('#wcElement').content;
-            //     // console.log(this.template);
-            //     defineComponent(doc.querySelector('#wcElement').content);
-            // })
             .catch(function (err) {
                 console.log('Failed to fetch page: ', err);
             });
@@ -36,18 +22,23 @@ class WcWebComponent {
         // You can now even select part of that html as you would in the regular DOM 
         // Example:
         // var docArticle = doc.querySelector('article').innerHTML;
-
-        this.template = doc.querySelector('#wcElement').content;
-        this.defineComponent(this.template);
+        this.template = doc.querySelector('#wcElement');
+        this.defineComponent(this.template, this.transformFunc);
     }
 
-    defineComponent(template) {
+    defineComponent(templateHtml, transformFunc) {
         class MyWcElement extends HTMLElement {
             constructor() {
                 super();
+
                 let shadow = this.attachShadow({ mode: 'open' });
-                // shadow.appendChild(this.template.cloneNode(true));
-                shadow.appendChild(template.cloneNode(true));
+                let template = templateHtml;
+
+                if (transformFunc) {
+                    template = transformFunc(this, template);
+                }
+
+                shadow.appendChild(template.content.cloneNode(true));
             }
 
             connectecCallback() {
