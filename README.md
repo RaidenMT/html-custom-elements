@@ -21,6 +21,7 @@ https://developer.snapappointments.com/bootstrap-select/
 
 ##Chartjs
 https://www.chartjs.org/
+https://medium.com/wdstack/bootstrap-4-chart-js-39006427f08f
 
 ##Web Components
 https://dev.to/thepassle/web-components-from-zero-to-hero-4n4m
