@@ -1,9 +1,10 @@
 class WcWebComponent {
-    constructor(component, transformFunc) {
+    constructor(component, transformFunc, initFunc) {
         this.name = 'wc-' + component;
         this.component = component;
         this.template = undefined;
         this.transformFunc = transformFunc;
+        this.initFunc = initFunc;
     }
 
     registerComponent() {
@@ -23,10 +24,10 @@ class WcWebComponent {
         // Example:
         // var docArticle = doc.querySelector('article').innerHTML;
         this.template = doc.querySelector('#wcElement');
-        this.defineComponent(this.template, this.transformFunc);
+        this.defineComponent(this.template, this.transformFunc, this.initFunc);
     }
 
-    defineComponent(templateHtml, transformFunc) {
+    defineComponent(templateHtml, transformFunc, initFunc) {
         class MyWcElement extends HTMLElement {
             constructor() {
                 super();
@@ -39,6 +40,10 @@ class WcWebComponent {
                 }
 
                 shadow.appendChild(template.content.cloneNode(true));
+
+                if (initFunc) {
+                    initFunc(shadow);
+                }
             }
 
             connectecCallback() {
